@@ -7,7 +7,7 @@
 #define PI 3.1415
 
 
-float* transformada_inversa(float complex* ck, int N) {
+double* transformada_inversa(double complex* ck, int N) {
 
 
     
@@ -17,9 +17,9 @@ float* transformada_inversa(float complex* ck, int N) {
     
     /*INICIALIZAR VALORES F(XJ) E XJ E CK*/
     
-    float * F_xj = malloc (sizeof (float) * 2*N);
+    double * F_xj = malloc (sizeof (double) * 2*N);
     float xj[2*N];
-    float complex sum = 0 ;
+    double complex sum = 0 ;
     
     
      for(j = 0 ; j < 2*N; j++) {
@@ -49,13 +49,13 @@ float* transformada_inversa(float complex* ck, int N) {
 }
 
 
-float complex * transformada_direta (float * F_xj, int N) {
+double complex * transformada_direta (double * F_xj, int N) {
     
     int k;
     int j;
     float xj[2*N];
-    float complex sum = 0 ;
-    float complex*  ck = malloc (sizeof(float complex) * 2*N );
+    double complex sum = 0 ;
+    double complex*  ck = malloc (sizeof(float complex) * 2*N );
     
     
      for(j = 0 ; j < 2*N; j++) {
@@ -78,16 +78,16 @@ float complex * transformada_direta (float * F_xj, int N) {
     return ck;
 }
 
-float complex * fftrec (float complex * c, float complex *f, int N, bool dir) {
+double complex * fftrec (double complex * c, double complex *f, int N, bool dir) {
     
 
-   float complex*  even = malloc (sizeof(float complex) *N );
-   float complex*  odd = malloc (sizeof(float complex) *N );
-   float complex*  fe = malloc (sizeof(float complex) * N );
-   float complex*  fo = malloc (sizeof(float complex) *N );
+   double complex*  even = malloc (sizeof(double complex) *N );
+   double complex*  odd = malloc (sizeof(double complex) *N );
+   double complex*  fe = malloc (sizeof(double complex) * N );
+   double complex*  fo = malloc (sizeof(double complex) *N );
 
    int j;
-   float complex eij;
+   double complex eij;
    
    
    

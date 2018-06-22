@@ -3,9 +3,9 @@
 
 #include <math.h>
 
-float*    transformada_inversa(float complex * ck, int N);
-float complex * transformada_direta (float * F_xj, int N);
-float complex * fftrec (float complex * c, float complex *f, int N, bool dir);
+double*    transformada_inversa(double complex * ck, int N);
+double complex * transformada_direta (double * F_xj, int N);
+double complex * fftrec (double complex * c, double complex *f, int N, bool dir);
 
 #endif /* TRANSFORMADAS_H */
 
