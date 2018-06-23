@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/data.o \
 	${OBJECTDIR}/fftpack4.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/transformadas.o
@@ -63,6 +64,11 @@ LDLIBSOPTIONS=-lm
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/transformadas: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/transformadas ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/data.o: data.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/data.o data.c
 
 ${OBJECTDIR}/fftpack4.o: fftpack4.c
 	${MKDIR} -p ${OBJECTDIR}

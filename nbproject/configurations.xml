@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>data.h</itemPath>
       <itemPath>fftpack4.h</itemPath>
       <itemPath>fftpack4_precision.h</itemPath>
       <itemPath>transformadas.h</itemPath>
@@ -15,6 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>data.c</itemPath>
       <itemPath>fftpack4.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>transformadas.c</itemPath>
@@ -46,6 +48,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="data.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="fftpack4.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="fftpack4.h" ex="false" tool="3" flavor2="0">
@@ -79,6 +85,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="data.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="data.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="fftpack4.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="fftpack4.h" ex="false" tool="3" flavor2="0">
